@@ -8,3 +8,5 @@ import { CommonModule } from '@angular/common';
   template: '<p>Home with Standalone Components works!</p>',
 })
 export class HomeComponent {}
+
+export default HomeComponent;

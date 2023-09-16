@@ -7,9 +7,7 @@ import { HomeComponent } from './pages/home/home.component';
   selector: 'app-root',
   standalone: true,
   imports: [CommonModule, RouterOutlet, HomeComponent],
-  template: `<router-outlet></router-outlet>
-
-    <app-home></app-home>`,
+  template: `<router-outlet></router-outlet>`,
 })
 export class AppComponent {
   title = 'angular-new-features-in-shorts';
