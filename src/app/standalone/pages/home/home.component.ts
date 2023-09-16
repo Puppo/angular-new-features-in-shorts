@@ -10,7 +10,7 @@ import { CopyrightComponent } from '../../components/copyright/copyright.compone
   imports: [CommonModule, TimerComponent, CopyrightComponent],
   template: `<p>
     Home with Standalone Components works!
-    <app-timer [value]="time" />
+    <app-timer [value]="time" withSecond />
     <br />
     <app-copyright year="23" />
   </p>`,
