@@ -2,13 +2,17 @@ import { Component, DestroyRef, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DoSomethingService } from '../../services/do-something.service';
 import { TimerComponent } from '../../components/timer/timer.component';
+import { CopyrightComponent } from '../../components/copyright/copyright.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, TimerComponent],
+  imports: [CommonModule, TimerComponent, CopyrightComponent],
   template: `<p>
-    Home with Standalone Components works! <app-timer [value]="time" />
+    Home with Standalone Components works!
+    <app-timer [value]="time" />
+    <br />
+    <app-copyright year="23" />
   </p>`,
 })
 export class HomeComponent implements OnInit {
