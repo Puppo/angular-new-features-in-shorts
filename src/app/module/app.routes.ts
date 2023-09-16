@@ -12,6 +12,10 @@ const routes: Routes = [
     loadChildren: () => import('./pages/home/home.module'),
   },
   {
+    path: 'post/:id',
+    loadChildren: () => import('./pages/post/post.module'),
+  },
+  {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
