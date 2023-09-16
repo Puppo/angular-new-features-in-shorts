@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DoSomethingService } from '../../services/do-something.service';
 
 @Component({
   selector: 'app-home',
@@ -7,6 +8,12 @@ import { CommonModule } from '@angular/common';
   imports: [CommonModule],
   template: '<p>Home with Standalone Components works!</p>',
 })
-export class HomeComponent {}
+export class HomeComponent implements OnInit {
+  protected doSomethingSv: DoSomethingService = inject(DoSomethingService);
+
+  ngOnInit() {
+    this.doSomethingSv.doSomething();
+  }
+}
 
 export default HomeComponent;
