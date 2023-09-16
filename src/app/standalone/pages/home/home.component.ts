@@ -1,13 +1,15 @@
 import { Component, DestroyRef, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DoSomethingService } from '../../services/do-something.service';
+import { TimerComponent } from '../../components/timer/timer.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule],
-  template:
-    '<p>Home with Standalone Components works! {{ time | date : "mediumTime" }}</p>',
+  imports: [CommonModule, TimerComponent],
+  template: `<p>
+    Home with Standalone Components works! <app-timer [value]="time" />
+  </p>`,
 })
 export class HomeComponent implements OnInit {
   protected doSomethingSv: DoSomethingService = inject(DoSomethingService);
